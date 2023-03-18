@@ -522,7 +522,7 @@ BOOL CALLBACK DialogProc(HWND hDlg, UINT iMsg, WPARAM wParam, LPARAM lParam)
 			
 			if (curl) {
 				curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "POST");
-				curl_easy_setopt(curl, CURLOPT_URL, "https://vector.express/api/v2/public/convert/dwg/cad2pdf/pdf?cad2pdf-auto-fit=true");
+				curl_easy_setopt(curl, CURLOPT_URL, "https://vector.express/api/v2/public/convert/dwg/cad2pdf/pdf?cad2pdf-auto-fit=true&cad2pdf-auto-orientation=true");
 				curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
 				curl_easy_setopt(curl, CURLOPT_DEFAULT_PROTOCOL, "https");
 				struct curl_slist *headers = NULL;
